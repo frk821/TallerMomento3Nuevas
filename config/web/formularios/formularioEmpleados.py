@@ -19,13 +19,13 @@ class FormularioEmpleados(forms.Form):
         max_length=20,
         widget=forms.TextInput(attrs={'class':'form-control mb-3'})
     )
-    fotografia=forms.CharField(
+    foto=forms.CharField(
         required=True,
         widget=forms.TextInput(attrs={'class':'form-control mb-3'})
     )
     cargo=forms.ChoiceField(
         required=True,
-        widget=forms.Select(attrs={'class':'form-control mb-3'}),
+        widget=forms.Select(attrs={'class':'form-select mb-3'}),
         choices=CARGO
     )
     salario=forms.CharField(

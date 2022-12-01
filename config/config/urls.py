@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from web.views import Home,Platos,Empleados #importamos la funcion "Home" de la carpeta "web" y del archivo "views"
+from web.views import Home,PlatosVista,EmpleadosVista,PlatosRegistrados,EmpleadosRegistrados #importamos la funcion "Home" de la carpeta "web" y del archivo "views"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Home, name='home'), #ruta que llama a la funcion Home
-    path('platos/',Platos, name='platos'), #ruta que llama a la funcion Platos
-    path('empleados/', Empleados, name='empleados') #ruta que llama a la funcion Empleados
+    path('platos/',PlatosVista, name='platos'), #ruta que llama a la funcion Platos
+    path('empleados/', EmpleadosVista, name='empleados'), #ruta que llama a la funcion Empleados
+    path('platosRegistrados/', PlatosRegistrados, name='platosRegistrados'),
+    path('empleadosRegistrados/', EmpleadosRegistrados, name='empleadosRegistrados') 
 ]
